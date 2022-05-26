@@ -1,0 +1,14 @@
+en:
+  date:
+    formats:
+      default:
+        '%m/%d/%Y'
+  main: Main     
+  help: Help
+  main_page: Main Page
+  about: About
+  current_date: Current date
+  visits: Visits
+  hello: "Hello world"
+  label:
+    hello: Hello, %s

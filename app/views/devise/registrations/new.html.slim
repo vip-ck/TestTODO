@@ -1,0 +1,16 @@
+h2
+  | Sign up
+= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = render "devise/shared/error_messages", resource: resource
+  = f.text_field :name, autofocus: true
+  = f.email_field :email, autocomplete: "email"
+    - if @minimum_password_length
+      em
+        | (
+        = @minimum_password_length
+        |  characters minimum)
+  = f.password_field :password, autocomplete: "new-password"
+  = f.password_field :password_confirmation, autocomplete: "new-password"
+  .actions
+    = f.submit "Sign up"
+= render "devise/shared/links"

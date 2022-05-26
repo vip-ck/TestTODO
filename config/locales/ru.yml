@@ -1,0 +1,36 @@
+ru:
+  main: Главная
+  date:
+    formats:
+      default:
+        '%d.%m.%Y'      
+  help: Помощь
+  main_page: Главная страница
+  about: О нас
+  current_date: Текущая дата
+  visits: Визиты
+  events: Список дел
+  new_event: Новое дело
+  show: Показать
+  back: Назад
+  label:
+    log_in: Вход
+    log_out: Выход
+    hello: Привет, %s
+    edit_profile: Изменить профиль
+    registration: Регистрация
+  activerecord:
+    errors:
+      messages:
+        blank: обязательно для заполнения
+        too_short: слишком коротко
+
+      models:
+        user: Пользователи
+        post: Сообщения
+      attributes:
+        user:
+          password:              Пароль
+          password_confirmation: Подтверждение
+          email:                 Email
+          name:                  Имя пользователя
