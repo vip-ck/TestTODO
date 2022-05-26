@@ -33,9 +33,12 @@ gem 'whenever', require: false
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails'
   gem 'ffaker', '~> 2.20'
   gem 'letter_opener'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'simplecov', require: false
 end
 
 group :development do
