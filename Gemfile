@@ -35,6 +35,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'ffaker', '~> 2.20'
   gem 'letter_opener'
+  gem 'rspec-rails'
 end
 
 group :development do
