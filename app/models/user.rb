@@ -14,10 +14,16 @@ class User < ApplicationRecord
   validates :email, presence: true
   validates :email, uniqueness: true
 
-  Role.find_each do |role|
-    define_method "#{role.code}?" do
-      role_id == role.id
+  if defined?(Role) && ActiveRecord::Base.connection.table_exists?(:roles)
+    Role.find_each do |role|
+      define_method "#{role.code}?" do
+        role_id == role.id
+      end
     end
+  end
+
+  def admin?
+    role&.code == 'admin'
   end
 
   before_save :ensure_authentication_token
