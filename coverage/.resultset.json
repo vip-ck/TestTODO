@@ -69,17 +69,13 @@
           null
         ]
       },
-      "/home/vip/Geekbrains/TestTODO/spec/models/user_spec.rb": {
+      "/home/vip/Geekbrains/TestTODO/spec/models/item_spec.rb": {
         "lines": [
           1,
-          6,
+          3,
           null,
           2,
           2,
-          2,
-          2,
-          2,
-          null,
           null
         ]
       },
@@ -93,8 +89,35 @@
           1,
           null
         ]
+      },
+      "/home/vip/Geekbrains/TestTODO/spec/models/role_spec.rb": {
+        "lines": [
+          null,
+          1,
+          4,
+          null,
+          2,
+          null,
+          2,
+          2,
+          null
+        ]
+      },
+      "/home/vip/Geekbrains/TestTODO/spec/models/user_spec.rb": {
+        "lines": [
+          1,
+          6,
+          null,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1653599262
+    "timestamp": 1653860542
   }
 }

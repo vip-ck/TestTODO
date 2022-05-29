@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Role < ApplicationRecord
-  has_many :users
+  has_many :users, dependent: :nullify
   validates :name, presence: true
   validates :name, length: { maximum: 16, minimum: 3 }
   validates :name, uniqueness: true
