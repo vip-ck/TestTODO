@@ -14,7 +14,7 @@ User.create! email: email,
              name: 'Администратор',
              role: admin_role
 
-hash_users = 10.times.map do
+hash_users = Array.new(10) do
   email = FFaker::Internet.safe_email
   {
     email: email,
@@ -26,17 +26,17 @@ end
 
 users = User.create! hash_users
 
-hash_events = 20.times.map do
+hash_events = Array.new(20) do
   {
     name: FFaker::HipsterIpsum.paragraph[3...20],
     content: FFaker::HipsterIpsum.paragraphs,
-    finished_at: (Time.now + rand(1..31).day),
+    finished_at: (Time.zone.now + rand(1..31).day),
     user_id: users.sample.id
   }
 end
 
 events = Event.create! hash_events
-hash_items = 200.times.map do
+hash_items = Array.new(200) do
   {
     name: FFaker::HipsterIpsum.paragraph[3...20],
     event_id: events.sample.id

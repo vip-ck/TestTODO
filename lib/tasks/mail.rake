@@ -3,7 +3,7 @@
 namespace :mails do
   desc 'Рассылка письма о дедлайне событий'
   task event_deadline: :environment do
-    event_finish = Event.select { |e| e.finished_at < (Time.now + 3.day) }
+    event_finish = Event.select { |e| e.finished_at < (Time.zone.now + 3.days) }
                         .group_by(&:user_id)
     event_finish.each do |user_id, event|
       user = User.find(user_id)

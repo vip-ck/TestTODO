@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :event do
     name { FFaker::CheesyLingo.title }
@@ -6,8 +8,8 @@ FactoryBot.define do
     user
     finished_at { FFaker::Time.datetime }
   end
-    factory :event_wrong, parent: :event do
-      name { nil }
-      user { nil }
+  factory :event_wrong, parent: :event do
+    name { nil }
+    user { nil }
   end
 end

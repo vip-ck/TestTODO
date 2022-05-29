@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe User, type: :model do
   subject { build(:user) }
 
@@ -6,5 +8,4 @@ RSpec.describe User, type: :model do
   it { is_expected.to validate_length_of(:name).is_at_most(16) }
   it { is_expected.to belong_to(:role) }
   it { is_expected.to have_many(:events).dependent(:destroy) }
-
 end
