@@ -1,0 +1,13 @@
+en:
+  activerecord:
+    models:
+      event: Event
+    attributes:
+      event:
+        user: User
+        name: Name
+        content: Content
+        done: Done
+        finished_at: Finished at
+        created_at: Created at
+        updated_at: Updated at
