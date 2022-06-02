@@ -42,5 +42,30 @@ RSpec.describe EventsController, type: :controller do
       }.to change { Event.count }.by 1
     end
   end
-
+  it :edit do
+    get :edit, params: { id: event_own.id }
+    expect(response).to have_http_status(:success)
+  end
+  context 'при обновлении события' do
+    it 'можно обновить свое событие' do
+      post :update, params: {id: event_own.id, event: attributes_for(:event)}
+      expect(response).to have_http_status(:redirect)
+    end
+    it 'нельзя обновить чужое событие' do
+      expect {
+        get :update, params: { id: event.id, event: attributes_for(:event) }
+        }.to raise_error(Pundit::NotAuthorizedError)
+    end
+  end
+  context 'при удалении события' do
+    it 'можно обновить свое событие' do
+      delete :destroy, params: { id: event_own.id }
+      expect(response).to have_http_status(:redirect)
+    end
+    it 'нельзя обновить чужое событие' do
+      expect {
+        get :destroy, params: { id: event.id}
+        }.to raise_error(Pundit::NotAuthorizedError)
+    end
+  end
 end
