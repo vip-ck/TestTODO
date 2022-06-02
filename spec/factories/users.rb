@@ -7,5 +7,11 @@ FactoryBot.define do
     active { true }
     role { create(:role) }
     password { 'какой-то пароль' }
+
+    after(:create) do |user|
+      def user.admin?
+        false
+      end
+    end
   end
 end
