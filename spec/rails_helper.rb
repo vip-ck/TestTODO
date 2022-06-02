@@ -5,7 +5,10 @@ require_relative '../config/environment'
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter '/config/'
+  add_filter '/spec/'
+  end
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
