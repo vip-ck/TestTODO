@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  include Pundit
+  include Pundit::Authorization
   before_action :devise_permit_params, if: :devise_controller?
   before_action :check_locale
 

@@ -28,6 +28,7 @@ gem 'pundit'
 gem 'rails-i18n'
 gem 'resque'
 gem 'resque-scheduler'
+gem 'rspec-grape'
 gem 'slim-rails'
 gem 'whenever', require: false
 
@@ -36,6 +37,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'ffaker', '~> 2.20'
   gem 'letter_opener'
+  gem 'pry'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
