@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Events < Grape::API
-  helpers FiltersHelper, EventsHelper, Pundit
+  helpers FiltersHelper, EventsHelper#, Pundit::Authorization
 
   resource :events do
     desc 'Список дел'
@@ -9,7 +9,8 @@ class Events < Grape::API
       use :filters
     end
     get '/' do
-      scope = policy_scope(events_scope(params[:all]))
+      scope = events_scope(params[:all])
+      # scope = policy_scope(events_scope(params[:all]))
       present scope, with: Entities::EventIndex
     end
 
@@ -19,7 +20,7 @@ class Events < Grape::API
       end
 
       get '/' do
-        authorize @event, :show?
+        # authorize @event, :show?
         present @event, with: Entities::Event
       end
 

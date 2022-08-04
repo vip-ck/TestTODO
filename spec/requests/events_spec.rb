@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 RSpec.describe EventsController, type: :controller do
   let(:user) { create(:user) }
   let(:event) { create(:event) }
@@ -53,7 +51,7 @@ RSpec.describe EventsController, type: :controller do
     end
     it 'нельзя обновить чужое событие' do
       expect {
-        get :update, params: { id: event.id, event: attributes_for(:event) }
+        post :update, params: { id: event.id, event: attributes_for(:event) }
         }.to raise_error(Pundit::NotAuthorizedError)
     end
   end
