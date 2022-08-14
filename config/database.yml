@@ -7,16 +7,16 @@ default: &default
 
 development:
   <<: *default
-  database: TODO_development
+  database: todo_development
 
   
 test:
   <<: *default
-  database: TODO_test
+  database: todo_test
 
 
 production:
   <<: *default
-  database: TODO_production
-  username: TODO
-  password: <%= ENV['TODO_DATABASE_PASSWORD'] %>
+  database: todo_production
+  #  username: TODO
+  #  password: <%= ENV['TODO_DATABASE_PASSWORD'] %>

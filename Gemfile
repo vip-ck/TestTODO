@@ -32,6 +32,11 @@ gem 'resque-scheduler'
 gem 'rspec-grape'
 gem 'slim-rails'
 gem 'whenever', require: false
+gem 'letter_opener'
+gem 'ffaker', '~> 2.20'
+
+  
+  
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

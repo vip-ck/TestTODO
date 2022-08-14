@@ -14,7 +14,7 @@ Rails.application.configure do
 
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
-  config.assets.compile = false
+  config.assets.compile = true
 
   config.log_level = :info
 
@@ -49,7 +49,7 @@ Rails.application.configure do
     port:                 587,
     domain:               'example.com',
     user_name:            ENV['EMAIL'],
-    password:             ENV['EMAIL_PASSWORD']
+    password:             ENV['EMAIL_PASSWORD'],
     authentication:       'plain',
     enable_starttls_auto: true,
     open_timeout:         5,

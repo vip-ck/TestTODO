@@ -9,12 +9,12 @@ p
   =< session[:about_counter] 
 p
   = list_tag(%w[first second third]) 
-  = image_tag("/tig.jpg", width: "700px")
+  = image_tag("tig.jpg", width: "700px")
 p
   => link_to t(:main_page), root_path
 
 p 
   = link_to t(:help), help_index_path
-/== render 'shared/language_files'
+/ == render 'shared/language_files'
 
 

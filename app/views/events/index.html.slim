@@ -10,7 +10,7 @@ table.table.table-dark.table-sm.table-striped
     = render partial: 'event', collection: @events
         
 p
-  = link_to t(:new_event), new_event_path, class: "btn btn-info"
+  = link_to t(:new_event), new_event_path, class: "btn btn-success"
 p
   = paginate @events, theme: 'bootstrap-5',
                       pagination_class: "pagination-sm flex-wrap justify-content-center",
